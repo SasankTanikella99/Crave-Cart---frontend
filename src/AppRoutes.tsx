@@ -4,6 +4,7 @@ import HomePage from "./pages/HomePage"
 import AuthCallBackPage from "./pages/AuthCallBackPage"
 import UserProfilePage from "./pages/UserProfilePage"
 import ProtectedRoute from "./auth/ProtectedRoute"
+import ManageRestaurantPage from "./pages/ManageRestaurantPage"
 
 //  we're only going to have one group of routes which is going to contain all of the routes for our app so anytime we add a new route it's going to go in here 
 
@@ -14,6 +15,7 @@ const AppRoutes = () => {
         <Route path="/" element={<Layout showHero> <HomePage /> </Layout>} />
         <Route element={<ProtectedRoute />}> 
           <Route path="/user-profile" element={<Layout> <UserProfilePage /></Layout>} />
+          <Route path="/manage-restaurant" element={<Layout> <ManageRestaurantPage /></Layout>} />
         </Route>
         
         <Route path="*" element={<Navigate to= "/" />} />
